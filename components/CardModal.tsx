@@ -5,17 +5,19 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import HeroDetails from 'components/HeroDetails';
 
 const CardModal = ({ cards }: { cards: Card[] }) => {
   const router = useRouter();
   const { deckId, cardId } = router.query;
-  console.log(deckId, cardId);
 
   const card = cards.find((card) => card.code === cardId);
 
   const onClose = () => {
     router.push(`/${deckId}`, undefined, { shallow: true });
   };
+
+  console.log(card);
 
   return (
     <Modal
@@ -57,6 +59,7 @@ const CardModal = ({ cards }: { cards: Card[] }) => {
               <Typography variant="h6" component="h3">
                 {'Hero info'}
               </Typography>
+              {card && <HeroDetails card={card} />}
             </Grid>
           </Grid>
         </Box>

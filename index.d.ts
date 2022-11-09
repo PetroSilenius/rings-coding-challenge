@@ -12,4 +12,9 @@ interface Card {
   description: string;
   image: string;
   traits: string;
+  type_name: string;
+  attack: number;
+  health: number;
+  defense: number;
+  willpower: number;
 }
