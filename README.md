@@ -29,6 +29,15 @@ I would have liked to spend some more time on figuring a good way to fetch all t
 
 I started the project from a template that I'm pretty familiar one at https://github.com/mui/material-ui/tree/master/examples/nextjs-with-typescript. Next.js made sense for the data fetching and ended going with SSR but ISR could have been also an option if the visitor amounts on the page would be large.
 
+## What I would have done with an extra hour
+
+- Finish up on the DeckSearch test case and add a few more for example for opening the modal
+- Add a search button as pressing enter isn't really clear for most users
+- Add hero action description to the modal cards with `dangerouslySetInnerHTML`
+- Change the search field from a text input into a Autocomplete with all valid ids as options
+- Configure linting with `next lint`
+- Set up a Github workflow for running test and linting
+
 ## Tech stack
 
 - Typescript
