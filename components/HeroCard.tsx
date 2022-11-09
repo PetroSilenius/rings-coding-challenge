@@ -15,6 +15,7 @@ const HeroCard = ({ card }: { card: Card }) => {
       <CardMedia>
         <Image
           src={`https://ringsdb.com/bundles/cards/${card.code}.png`}
+          priority
           width={300}
           height={400}
           alt="Image title"
