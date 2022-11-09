@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -22,10 +22,15 @@
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.2.2",
     "@types/node": "latest",
     "@types/react": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "typescript": "latest"
   }
 }
