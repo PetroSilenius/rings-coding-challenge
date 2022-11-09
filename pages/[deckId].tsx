@@ -3,9 +3,9 @@ import { GetServerSideProps } from 'next';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import HeroCard from 'components/HeroCard';
+import CardModal from 'components/CardModal';
 
 export default function DeckPage({ deck, cards }: { deck: Deck; cards: Card[] }) {
-  console.log(cards);
   return (
     <>
       <Typography component="h2" variant="h5" gutterBottom sx={{ fontWeight: 'bold' }}>
@@ -18,6 +18,7 @@ export default function DeckPage({ deck, cards }: { deck: Deck; cards: Card[] })
           </Grid>
         ))}
       </Grid>
+      <CardModal cards={cards} />
     </>
   );
 }
